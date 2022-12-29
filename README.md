@@ -37,10 +37,13 @@
 
 - [x] **HARDWARE:** Wire up and test LCD
 - [ ] **HARDWARE:** Wire up and test rotary encoder
-- [ ] **HARDWARE:** Wire up and test buttons
+- [x] **HARDWARE:** Wire up and test buttons
+- [ ] **HARDWARE:** Add hardware debouncing for all buttons
+- [ ] **HARDWARE:** Wire up and test MPR121
+- [ ] **HARDWARE:** Wire up and test load cell and 24bit ADC
 - [x] **CODE:** Create github repo
 - [x] **CODE:** Create and test Arduino project
-- [ ] **CODE:** Connect ESP32 to Wifi
+- [x] **CODE:** Connect ESP32 to Wifi
 - [ ] **CODE:** Setup webserver
 - [ ] **DESIGN:** Design web interface
 - [ ] **DESIGN:** Design LCD UI
