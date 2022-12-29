@@ -38,6 +38,7 @@
 - [ ] **HARDWARE:** Wire up and test LCD
 - [ ] **HARDWARE:** Wire up and test rotary encoder
 - [x] **CODE:** Create github repo
+- [x] **CODE:** Create and test Arduino project
 - [ ] **CODE:** Connect ESP32 to Wifi
 - [ ] **CODE:** Setup webserver
 - [ ] **CODE:** Design web interface
