@@ -35,13 +35,16 @@
 
 ## 3 To Do
 
-- [ ] **HARDWARE:** Wire up and test LCD
+- [x] **HARDWARE:** Wire up and test LCD
 - [ ] **HARDWARE:** Wire up and test rotary encoder
+- [ ] **HARDWARE:** Wire up and test buttons
 - [x] **CODE:** Create github repo
 - [x] **CODE:** Create and test Arduino project
 - [ ] **CODE:** Connect ESP32 to Wifi
 - [ ] **CODE:** Setup webserver
-- [ ] **CODE:** Design web interface
+- [ ] **DESIGN:** Design web interface
+- [ ] **DESIGN:** Design LCD UI
+- [ ] **DESIGN:** Design and layout Physical UI
 - [ ] **CODE:** Add Calibration functions
 - [ ] **CODE:** Add Tare function
 - [ ] **CODE:** Read ADC Val
@@ -54,7 +57,12 @@
 - [ ] **3D Print:** Design/Add Rotary encoder model to Project
 - [ ] **3D Print:** Design/Add Load Cell model to Project
 - [ ] **3D Print:** Design/Add Momentary switch model to Project
+- [ ] **3D Print:** Design/Add Battery model to Project
+- [ ] **3D Print:** Design/Add TP4056 model to Project
+- [ ] **3D Print:** Design/Add HX711 model to Project
+- [ ] **3D Print:** Design/Add MPR121 model to Project
 - [ ] **HARDWARE:** Layout breadboard circuit
+
 
 ---
 
