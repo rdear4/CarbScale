@@ -8,15 +8,26 @@
 #include <WebServer.h>
 #include <ESPmDNS.h>
 
+#include "HX711.h"
+
+#include "config.h"
 #include "secrets.h"
 
 #define TFT_CS        5
-#define TFT_RST        15 // Or set to -1 and connect to Arduino RESET pin
+#define TFT_RST        -1 // Or set to -1 and connect to Arduino RESET pin
 #define TFT_DC         32
 
 #define UP_Button_pin 27
 #define DOWN_Button_pin 26
 #define SELECT_Button_pin 25
+
+// HX711 circuit wiring
+const int LOADCELL_DOUT_PIN = 14;
+const int LOADCELL_SCK_PIN = 13;
+
+double measuredWeight = 0.0;
+
+HX711 scale;
 
 Adafruit_ST7735 tft = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
 
@@ -34,6 +45,12 @@ void setup() {
   //Set up Serial
   Serial.begin(115200);
   delay(1000);
+
+  //Initialize the Load Cell ADC
+  scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
+
+  scale.set_scale(LOAD_CELL_CALIBRATION_VALUE / KNOWN_CALIBRATION_WEIGHT);
+  scale.tare();
   
   //Initialize the LCD
   tft.initR(INITR_BLACKTAB);      // Init ST7735S chip, black tab
@@ -130,6 +147,12 @@ void loop() {
     tft.print("Food ");
     tft.print(selectedFoodIndex);
 
+    tft.setCursor(0, 100);
+    tft.print("Weight: ");
+    tft.setCursor(50, 100);
+    tft.print(measuredWeight, 1);
+      tft.print(" g   ");
+
     if (selectPressed) {
 
       tft.setCursor(0, 50);
@@ -140,6 +163,22 @@ void loop() {
 
   }
 
+  //If new weight is available, update it on screen
+  if (scale.is_ready()) {
+
+    double newWeight = scale.get_units(2);
+    if (abs(newWeight - measuredWeight) > 0.12) {
+      measuredWeight = newWeight;
+      //Draw over the last weight reading
+      tft.fillRect(48, 98, 50, 20, ST77XX_BLACK);
+
+      tft.setCursor(50, 100);
+
+      tft.print(newWeight, 1);
+      tft.print(" g   ");
+      //Draw the new weight
+    }
+    }
   
 
 }

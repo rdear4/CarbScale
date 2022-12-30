@@ -40,7 +40,7 @@
 - [x] **HARDWARE:** Wire up and test buttons
 - [ ] **HARDWARE:** Add hardware debouncing for all buttons
 - [ ] **HARDWARE:** Wire up and test MPR121
-- [ ] **HARDWARE:** Wire up and test load cell and 24bit ADC
+- [x] **HARDWARE:** Wire up and test load cell and 24bit ADC
 - [x] **CODE:** Create github repo
 - [x] **CODE:** Create and test Arduino project
 - [x] **CODE:** Connect ESP32 to Wifi
@@ -48,7 +48,7 @@
 - [ ] **DESIGN:** Design web interface
 - [ ] **DESIGN:** Design LCD UI
 - [ ] **DESIGN:** Design and layout Physical UI
-- [ ] **CODE:** Add Calibration functions
+- [x] **CODE:** Add Calibration functions
 - [ ] **CODE:** Add Tare function
 - [ ] **CODE:** Read ADC Val
 - [ ] **CODE:** Display Foods for user to select
@@ -74,6 +74,18 @@
 ### 12/28/22
 Began project in ernest. Doing it "right" this time by starting with a written plan (this markdown file) instead of jumping right in with hardware and adding code as neeeded. Hopefully a well thought out plan will keep me from acruing tiny mistakes and inefficiencies over time that will eventually turn into road blocks and points of stress down and make me not want to continue with the project. 
 
+### 12/29/2022
+
+Added the load cell and 24bit ADC (HX711). Might want to rethink using the HX711 as the version I have uses some proprietary, though open, data protocol. The newer version from DFRobot uses a trus I2C interface so I wonder if that will be more reliable.
+
+I used some US coins to calibrate and test the load cell. I'm getting fairly accurate results. Most measurements are within 0.2g so I'm pretty happy with that.
+
+I updated the code for the LCD to display the measure weights and it seems to be running well.
+
+Here's the state of the prototype after the second day.
+
+![Carb Scale Prototype](images/IMG0.JPG)
+
 ---
 
 ## 5 Notes
@@ -81,3 +93,10 @@ Began project in ernest. Doing it "right" this time by starting with a written p
 - Foods
   - List of foods should be stored as a CSV.
   - For now we're not going to worry about classifying the foods as breakfast, lunch, snack, etc.
+- Rotary Encoder
+  - The only rotary encoder I had didn't have the expected pinout. After messing with it for about an hour, one of the pins broke off. I decided to just use 3 momentary pushbuttons instead of 
+
+---
+
+## 6 References
+
