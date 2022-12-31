@@ -36,7 +36,7 @@
 ## 3 To Do
 
 - [x] **HARDWARE:** Wire up and test LCD
-- [ ] **HARDWARE:** Wire up and test rotary encoder
+- [ ] ~~**HARDWARE:** Wire up and test rotary encoder~~
 - [x] **HARDWARE:** Wire up and test buttons
 - [ ] **HARDWARE:** Add hardware debouncing for all buttons
 - [ ] **HARDWARE:** Wire up and test MPR121
@@ -50,14 +50,14 @@
 - [ ] **DESIGN:** Design and layout Physical UI
 - [x] **CODE:** Add Calibration functions
 - [ ] **CODE:** Add Tare function
-- [ ] **CODE:** Read ADC Val
+- [ ] **CODE:** Read raw ADC Val
 - [ ] **CODE:** Display Foods for user to select
 - [ ] **CODE:** Prompt User to select food
 - [ ] **3D Print:** Deisgn 3D prited enclosure
-- [ ] **3D Print:** Design/Add Load Cell model to Project
-- [ ] **3D Print:** Design/Add LCD model to Project
+- [x] **3D Print:** Design/Add Load Cell model to Project
+- [x] **3D Print:** Design/Add LCD model to Project
 - [ ] **3D Print:** Design/Add ESP32 model to Project
-- [ ] **3D Print:** Design/Add Rotary encoder model to Project
+- [ ] ~~**3D Print:** Design/Add Rotary encoder model to Project~~
 - [ ] **3D Print:** Design/Add Load Cell model to Project
 - [ ] **3D Print:** Design/Add Momentary switch model to Project
 - [ ] **3D Print:** Design/Add Battery model to Project
@@ -85,6 +85,15 @@ I updated the code for the LCD to display the measure weights and it seems to be
 Here's the state of the prototype after the second day.
 
 ![Carb Scale Prototype](images/IMG0.JPG)
+
+### 12/30/2022
+
+Started designing the housing. Got as far as the main body and the weight plate. Printed out the area where the load cell connects to the main housing and plate to test fit. Fit perfectly on the first try.
+
+Also designed models for the load cell and TFT display to include in the model.
+
+![View of housing with TFT, load cell and weight plate](images/IMG1.png)
+![Cutaway of same model](images/IMG2.png)
 
 ---
 
